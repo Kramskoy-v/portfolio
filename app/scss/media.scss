@@ -59,7 +59,7 @@
 @media (max-width: 767px) {
 	.home {
 		&__title {
-			font-size: 2.4em;
+			font-size: 1.2em;
 			line-height: 1.5;
 		}
 	}
@@ -98,6 +98,13 @@
 }
 
 @media (max-width: 576px) {
+	.home {
+		&__title {
+			font-size: 1em;
+			line-height: 1.5;
+		}
+	}
+
 	.portfolio .section-title {
 		span {
 			display: block;
@@ -133,7 +140,7 @@
 
 	.home {
 		&__title {
-			font-size: 2em;
+			font-size: .7em;
 		}
 	}
 

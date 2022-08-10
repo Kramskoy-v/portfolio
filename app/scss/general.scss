@@ -85,7 +85,8 @@ body {
 	padding-top: 20%;
 	background: url("../img/main.jpg") left top / cover no-repeat fixed;
 	&__title {
-		font-size: 3em;
+		font-family: "Overpass Mono",monospace;
+		font-size: 1.5em;
 		line-height: 1.8;
 		color: $colorHover;
 	}
@@ -183,6 +184,13 @@ body {
 		text-align: center;
 		color: $colorText;
 	} 
+	&__desc-second {
+		margin: 0;
+		padding: 5px 0 0;
+		text-align: center;
+		color:  #7a7a7a;
+	
+	}
 }
 
 .skills {
