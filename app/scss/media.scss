@@ -1,9 +1,16 @@
+@media (max-width: 1200px){
+	.home{
+		.container {
+			background-position: -30% 60%;
+		}
+	}
+}
 @media (max-width: 991px) {
 	.d-flex {
 		display: flex;
 		justify-content: flex-end;
 	}
-
+	
 	.menu {
 		position: fixed;
 		z-index: 2;
@@ -99,9 +106,14 @@
 
 @media (max-width: 576px) {
 	.home {
+		.container {
+			background-position:  190% 50%;
+		}
 		&__title {
+			margin-top: 10%;
 			font-size: 1em;
 			line-height: 1.5;
+
 		}
 	}
 
@@ -140,11 +152,15 @@
 
 	.home {
 		&__title {
+			margin-top: 10%;
 			font-size: .7em;
 		}
 	}
 
 	.portfolio {
+		&__item-wrap {
+			height: 180px;
+		}
 		&__list {
 			margin: 0 auto;
 			max-width: 300px;
@@ -154,7 +170,7 @@
 			min-height: 170px;
 		}
 		&__desc {
-			padding: 30px 10px;
+			
 			line-height: 1.2;
 			font-size: 1em;
 		}

@@ -27,7 +27,7 @@ body {
 	padding: 25px 0;
 	width: 100%;
 	z-index: 50;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .menu {
@@ -81,15 +81,27 @@ body {
 }
 
 .home {
-	height: 75vh;
+	background-color: #000000;
+	.container {
+	height: 70vh;
+	margin: 0 auto;
 	padding-top: 20%;
-	background: url("../img/main.jpg") left top / cover no-repeat fixed;
+	background-image: url("../img/main.jpg");
+	background-position:  0% 50%;
+	background-size: contain;
+	-o-background-size: contain;
+    -moz-background-size: contain;
+    -webkit-background-size: contain;
+	background-repeat:  no-repeat;
+	background-attachment: fixed;}
 	&__title {
+		max-width: 600px;
+		margin: 0 0 0 auto;
 		font-family: "Overpass Mono",monospace;
 		font-size: 1.5em;
 		line-height: 1.8;
-		color: $colorHover;
-	}
+		color: #fff;
+		}
 }
 
 .section-title {
@@ -111,6 +123,8 @@ body {
 	}
 	&__photo {
 		max-width: 350px;
+		filter: grayscale(.1);
+		
 	}
 	&__img {
 		width: 100%;
@@ -194,7 +208,11 @@ body {
 }
 
 .skills {
+	background-color: #252525;
 	padding: 30px 0;
+	.section-title {
+		  color: #000000;
+	}
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
@@ -228,6 +246,7 @@ body {
 		}
 		a {
 			color: $colorText;
+			text-decoration: underline;
 		}
 	}
 }

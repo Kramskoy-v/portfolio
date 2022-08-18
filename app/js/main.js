@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
 //animations home title
 
 const text = [
-	'Привет, Я Вячеслав,\n',
-	'Я Веб разработчик.'],
+	'Привет, Я Вячеслав!\n',
+	'Я Веб-разработчик'],
 	htmlOut = document.querySelector('.out');
 
 let line = 0,
