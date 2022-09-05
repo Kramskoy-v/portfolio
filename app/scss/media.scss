@@ -1,16 +1,17 @@
-@media (max-width: 1200px){
-	.home{
+@media (max-width: 1200px) {
+	.home {
 		.container {
 			background-position: -30% 60%;
 		}
 	}
 }
+
 @media (max-width: 991px) {
 	.d-flex {
 		display: flex;
 		justify-content: flex-end;
 	}
-	
+
 	.menu {
 		position: fixed;
 		z-index: 2;
@@ -20,17 +21,21 @@
 		width: 80%;
 		height: 100vh;
 		transition: 0.7s;
+
 		&--active {
 			left: -15px;
 			transition: 0.7s;
 		}
+
 		&__list {
 			margin-top: 30px;
 			flex-direction: column;
 		}
+
 		&__item {
 			margin-left: 0;
 		}
+
 		&__link {
 			display: inline-block;
 			width: 100%;
@@ -60,17 +65,17 @@
 			display: none;
 		}
 	}
-	
+
 }
 
 @media (max-width: 767px) {
 	.home {
 		&__title {
-			font-size: 1.2em;
+			font-size: 2.4em;
 			line-height: 1.5;
 		}
 	}
-	
+
 	.section-title {
 		font-size: 2em;
 	}
@@ -80,9 +85,11 @@
 			flex-direction: column;
 			align-items: center;
 		}
+
 		&__info {
 			max-width: 80%;
 		}
+
 		&__list {
 			padding: 40px 0;
 		}
@@ -107,13 +114,12 @@
 @media (max-width: 576px) {
 	.home {
 		.container {
-			background-position:  190% 50%;
+			background-position: 190% 50%;
 		}
+
 		&__title {
 			margin-top: 10%;
-			font-size: 1em;
-			line-height: 1.5;
-
+			font-size: 2em;
 		}
 	}
 
@@ -126,10 +132,12 @@
 
 	.contacts {
 		padding-top: 0;
+
 		&__list {
 			width: 100%;
 			margin: 90px auto;
 		}
+
 		&__link {
 			font-size: 1em;
 		}
@@ -138,10 +146,17 @@
 	.about,
 	.portfolio,
 	.experience,
-	.skills
-	{
-		padding: 0;
+	.skills {
+		padding: 10px;
 
+	}
+}
+
+@media (max-width: 415px) {
+	.home {
+		.container {
+			background-attachment: scroll;
+		}
 	}
 }
 
@@ -153,7 +168,7 @@
 	.home {
 		&__title {
 			margin-top: 10%;
-			font-size: .7em;
+			font-size: 1.4em;
 		}
 	}
 
@@ -161,16 +176,19 @@
 		&__item-wrap {
 			height: 180px;
 		}
+
 		&__list {
 			margin: 0 auto;
 			max-width: 300px;
 		}
+
 		&__item {
 			min-width: 280px;
 			min-height: 170px;
 		}
+
 		&__desc {
-			
+
 			line-height: 1.2;
 			font-size: 1em;
 		}

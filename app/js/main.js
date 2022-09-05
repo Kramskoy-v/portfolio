@@ -1,12 +1,12 @@
 'use strict'
 //Hamburger menu
-let hamburger = document.querySelector('.hamburger');
-let mobileMenu = document.querySelector('.menu');
-let linkClose = document.querySelector('.menu__list');
+let hamburger = document.querySelector('.hamburger'),
+	mobileMenu = document.querySelector('.menu'),
+	linkClose = document.querySelector('.menu__list');
 
 hamburger.addEventListener('click', function () {
-	hamburger.classList.toggle('hamburger--active')
-		& mobileMenu.classList.toggle('menu--active')
+	hamburger.classList.toggle('hamburger--active');
+	mobileMenu.classList.toggle('menu--active');
 });
 
 function closeMenu() {
