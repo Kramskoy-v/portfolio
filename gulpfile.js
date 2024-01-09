@@ -41,6 +41,7 @@ function build() {
       'app/fonts/**/*',
       'app/js/main.min.js',
       'app/pages/*.html',
+      'app/img/**/*',
       'app/*.ico',
       'app/*.html'
    ],
