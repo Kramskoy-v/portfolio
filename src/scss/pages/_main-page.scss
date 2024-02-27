@@ -18,15 +18,12 @@
         list-style: none;
         display: flex;
         justify-content: center;
+        column-gap: 40px;
     }
 
     &__item {
-        margin-left: 40px;
+        width: max-content;
         position: relative;
-
-        &:first-child {
-            margin-left: 0;
-        }
 
         &::after {
             content: "";
@@ -71,12 +68,11 @@
         transition: 0.7s;
     }
 
-    &--active {
+    &.active {
         :first-child {
             opacity: 0;
             transform: translateY(-100px);
         }
-
         :nth-child(2) {
             transform: translateY(3px) rotate(45deg);
         }
@@ -88,26 +84,35 @@
 
 .home {
     position: relative;
-    height: 100dvh;
+    min-height: 100dvh;
+    height: max-content;
 
     .container {
+        min-height: 100dvh;
         padding-top: 76px;
-        height: 100%;
         position: relative;
+        display: flex;
+        justify-content: center;
     }
 
     &__title-box {
         position: absolute;
-        max-width: 600px;
+        max-width: 620px;
         left: 50%;
         top: 150px;
         transform: translateX(-50%);
+        padding-right: 20px;
         line-height: 1.8;
         z-index: 2;
         color: $white;
-        transition: transform ease-in 0.4s;
+        transition: all ease-in 0.4s;
+
         span {
             font-size: 32px;
+        }
+
+        &.transform {
+            transform: translateX(0);
         }
     }
 
@@ -122,22 +127,26 @@
         max-width: 620px;
         right: 50%;
         top: 500px;
+        padding-left: 20px;
         transform: translateX(50%);
         z-index: 2;
-        transition: transform ease-in 0.4s;
+        transition: all ease-in 0.4s;
+        &.transform {
+            transform: translateX(0);
+        }
     }
+
     &__description {
         display: inline;
         width: max-content;
         font-size: 26px;
     }
+
     &__arrow {
         width: 60px;
         height: 60px;
         position: absolute;
-        left: 50%;
         bottom: 60px;
-        transform: translateX(-50%);
         animation: shake-vertical 2s ease-out infinite both;
         background-image: url("../img/double-arrow.png");
         background-repeat: no-repeat;
@@ -146,6 +155,7 @@
         z-index: 2;
         opacity: 1;
         transition: opacity ease-in 0.4s;
+
         &.hidden {
             opacity: 0;
         }
@@ -170,17 +180,17 @@
 
 .about {
     padding: 80px 0;
-    min-height: 800px;
-    height: 100dvh;
     overflow: hidden;
+
     .container {
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
+
     &__content {
-        padding: 40px 0;
+        padding: 90px 0;
         display: flex;
         justify-content: space-around;
     }
@@ -300,20 +310,15 @@
 
 .skills {
     padding: 80px 0;
-    min-height: 800px;
-    height: 100dvh;
 
     .container {
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
     }
 
     &__list {
         display: flex;
         margin: 0;
-        padding: 20px;
+        padding: 140px 20px;
         flex-wrap: wrap;
         justify-content: center;
         gap: 80px 130px;
@@ -332,6 +337,7 @@
         height: 100%;
         object-fit: contain;
     }
+
     .animation {
         opacity: 1;
         &:nth-of-type(even) {
@@ -365,6 +371,7 @@
             text-decoration: underline;
         }
     }
+
     .animation {
         opacity: 1;
         transform: translateY(0);
@@ -372,29 +379,35 @@
 }
 
 .contacts {
-    padding: 30px 0 60px;
+    padding: 80px 0 60px;
 
     &__list {
-        margin: 100px 50px;
-        padding: 0;
+        padding: 100px 50px;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
+        gap: 20px;
     }
 
     &__item {
-        padding: 20px 15px;
+        width: 70px;
+        height: 70px;
+        padding: 8px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all 0.4s;
+        &:hover {
+            box-shadow: 0 0 5px 2px $blue;
+        }
     }
 
     &__link {
-        font-size: 1.3rem;
         text-decoration: none;
-        color: $white-gray;
-        transition: 0.4s;
-
-        &:hover {
-            color: $white;
-            text-shadow: 1px 1px 2px $white;
+        display: block;
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
 }

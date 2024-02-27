@@ -8,25 +8,19 @@
             name="description"
             content="Создание и разработка сайтов. Крамской Вячеслав"
         />
-        <meta property="og:image" content="img/me.jpg" />
+        <meta property="og:image" content="img/me_1.jpg" />
         <meta
             property="og:description"
             content="Создание и разработка сайтов.  Крамской Вячеслав"
         />
         <meta property="og:title" content="Крамской Вячеслав Web Developer" />
         <title>Крамской Вячеслав Web Developer</title>
-        <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
-            integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS"
-            crossorigin="anonymous"
-        />
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="css/main.css" />
     </head>
 
     <body>
-        <header class="header">
+        <header class="header hidden">
             <div class="container d-flex">
                 <nav class="menu">
                     <ul class="menu__list">
@@ -78,13 +72,16 @@
                     <div class="home__description-box">
                         <p class="home__description"></p>
                     </div>
-                    <div class="home__arrow"></div>
+                    <div class="home__arrow hidden"></div>
                 </div>
                 <div id="particles-js"></div>
             </section>
             <section class="about" id="about">
                 <div class="container">
-                    <h2 class="section-title">&lt;обо_мне&gt;</h2>
+                    <h2 class="section-title">
+                        &lt;обо_мне&gt;
+                        <span> 'О том кто я, как и что делаю' </span>
+                    </h2>
                     <div class="about__content">
                         <div class="about__photo scroll-item">
                             <img
@@ -97,8 +94,11 @@
                             <div class="about__list">
                                 <p class="about__item scroll-item">
                                     Создаю динамические адаптивные сайты.
-                                    Работаю с HTML без шаблонизаторов,
-                                    семантическая верстка.
+                                    Работаю с HTML без шаблонизаторов, не
+                                    возникало необходимости - импорты в html
+                                    поддерживает gulp, emmet разворачивает
+                                    вложенность без написания циклов, но с
+                                    pug'ом знаком, семантическая верстка.
                                     <br />В большинстве случаев пользуюсь
                                     методологией БЭМ.
                                 </p>
@@ -106,7 +106,13 @@
                                     Стили пишу с препроцессором SASS. Применяю
                                     как чистый JavaScript так и библиотеки. При
                                     необходимости использую инструмент Perfect
-                                    pixel
+                                    pixel. Программы дизайна - figma, marsy и
+                                    photoshop.
+                                </p>
+                                <p class="about__item scroll-item">
+                                    Верстка тем с последующей натяжкой на cms
+                                    WordPress. Использование плагинов, внешних
+                                    api.
                                 </p>
                             </div>
                         </div>
@@ -123,8 +129,8 @@
                             выполнены с 0 до размещения на хостинге. Для
                             просмотра сайта выберите необходимый элемент при
                             помощи скролла или свайпа и совершите переход по
-                            клику'</span
-                        >
+                            клику'
+                        </span>
                     </h2>
                     <div class="portfolio__slider">
                         <div class="swiper mySwiper">
@@ -165,13 +171,11 @@
                                             class="portfolio__img-screen"
                                         />
                                         <p class="portfolio__desc">
-                                            Lorem ipsum dolor sit amet,
-                                            consectetur adipisicing elit.
-                                            Tempore adipisci, velit facilis
-                                            neque ut eius cupiditate similique
-                                            rerum exercitationem vitae quasi cum
-                                            eligendi. Praesentium esse eaque
-                                            quisquam sequi sed ducimus!
+                                            Сайт мотосервиса с динамическим
+                                            контентом в услугах и селектах форм
+                                            заявок. Подгрузка работает через
+                                            класс javascript и зависит от выбора
+                                            пользователя.
                                         </p>
                                     </a>
                                 </div>
@@ -187,14 +191,14 @@
                                             class="portfolio__img-screen"
                                         />
                                         <p class="portfolio__desc">
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit.
-                                            Quaerat, vel. Ipsa recusandae iste
-                                            illo ipsum perferendis velit
-                                            voluptatum voluptatem alias dicta
-                                            repellendus, veritatis culpa totam
-                                            eos asperiores. Corrupti, aspernatur
-                                            odio?
+                                            Верстка многостраничного сайта.
+                                            Настройка отправки формы с
+                                            определенным типом файлов. Некоторые
+                                            стили прописаны инлайново (указано
+                                            по т.з.) контент-менеджер - делает
+                                            копию страницы и в верстке меняет
+                                            фон, например, без необходимости
+                                            добавлять css.
                                         </p>
                                     </a>
                                 </div>
@@ -210,79 +214,13 @@
                                             class="portfolio__img-screen"
                                         />
                                         <p class="portfolio__desc">
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            ad veritatis velit nam ipsa!
-                                            Suscipit voluptas excepturi maxime
-                                            nobis, aut ut ex, veniam dolore
-                                            perspiciatis officia ullam
-                                            blanditiis eaque ipsum?
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a
-                                        href="https://golden-hall-vrn.ru"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            src="img/screens/screen_site_6.jpg"
-                                            alt="скриншот сайта"
-                                            class="portfolio__img-screen"
-                                        />
-                                        <p class="portfolio__desc">
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            ad veritatis velit nam ipsa!
-                                            Suscipit voluptas excepturi maxime
-                                            nobis, aut ut ex, veniam dolore
-                                            perspiciatis officia ullam
-                                            blanditiis eaque ipsum?
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a
-                                        href="https://sportvuz.ru"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            src="img/screens/screen_site_7.jpg"
-                                            alt="скриншот сайта"
-                                            class="portfolio__img-screen"
-                                        />
-                                        <p class="portfolio__desc">
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            ad veritatis velit nam ipsa!
-                                            Suscipit voluptas excepturi maxime
-                                            nobis, aut ut ex, veniam dolore
-                                            perspiciatis officia ullam
-                                            blanditiis eaque ipsum?
-                                        </p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a
-                                        href="https://steell-world.ru"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        <img
-                                            src="img/screens/screen_site_8.jpg"
-                                            alt="скриншот сайта"
-                                            class="portfolio__img-screen"
-                                        />
-                                        <p class="portfolio__desc">
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            ad veritatis velit nam ipsa!
-                                            Suscipit voluptas excepturi maxime
-                                            nobis, aut ut ex, veniam dolore
-                                            perspiciatis officia ullam
-                                            blanditiis eaque ipsum?
+                                            Сайт-портфолио цифрового художника.
+                                            Минималистичный и функциональный
+                                            дизайн. Верстка и натяжка на
+                                            wordpress. Использование ACF, смена
+                                            языка, отправка формы. Добавление
+                                            новых работ в галерею с просмотром
+                                            через библиотеку fancybox.
                                         </p>
                                     </a>
                                 </div>
@@ -298,13 +236,70 @@
                                             class="portfolio__img-screen"
                                         />
                                         <p class="portfolio__desc">
-                                            Lorem ipsum, dolor sit amet
-                                            consectetur adipisicing elit. Nobis
-                                            ad veritatis velit nam ipsa!
-                                            Suscipit voluptas excepturi maxime
-                                            nobis, aut ut ex, veniam dolore
-                                            perspiciatis officia ullam
-                                            blanditiis eaque ipsum?
+                                            Верстка некоторых блоков, работа со
+                                            слайдерами и картой. Стилизация
+                                            формы от скрипта битрикса.
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a
+                                        href="https://golden-hall-vrn.ru"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="img/screens/screen_site_6.jpg"
+                                            alt="скриншот сайта"
+                                            class="portfolio__img-screen"
+                                        />
+                                        <p class="portfolio__desc">
+                                            Большой многостраничный сайт.
+                                            Банкетного центр с несколькими
+                                            залами. Верстка и натяжка на
+                                            wordpress. Создание и вывод рубрик,
+                                            параллакс эффекты, слайдеры,
+                                            анимации.
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a
+                                        href="https://sportvuz.ru"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="img/screens/screen_site_7.jpg"
+                                            alt="скриншот сайта"
+                                            class="portfolio__img-screen"
+                                        />
+                                        <p class="portfolio__desc">
+                                            Сайт блог спортивной ассоциации
+                                            ВУЗов. Верстка и натяжка на
+                                            wordpress. Вывод новостей на главную
+                                            страницу. Слайдеры, много работы с
+                                            ACF по карточкам ВУЗов.
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a
+                                        href="https://steell-world.ru"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            src="img/screens/screen_site_8.jpg"
+                                            alt="скриншот сайта"
+                                            class="portfolio__img-screen"
+                                        />
+                                        <p class="portfolio__desc">
+                                            Сайт каталог фирмы по изготовлению
+                                            изделий из металла. Многостраничная
+                                            верстка и натяжка на wordpress.
+                                            Анимации, слайдеры с просмотром
+                                            галерей.
                                         </p>
                                     </a>
                                 </div>
@@ -316,7 +311,13 @@
             </section>
             <section class="skills" id="skills">
                 <div class="container">
-                    <h2 class="section-title">&lt;навыки&gt;</h2>
+                    <h2 class="section-title">
+                        &lt;навыки&gt;
+                        <span>
+                            'Перечень основных технологий которые я использую в
+                            работе'
+                        </span>
+                    </h2>
                     <ul class="skills__list">
                         <li class="skills__image scroll-item">
                             <img
@@ -345,7 +346,7 @@
                         <li class="skills__image scroll-item">
                             <img
                                 src="img/skills/php.svg"
-                                alt="JavaScript icon"
+                                alt="php icon"
                                 class="skills__img"
                                 title="Язык программирования php"
                             />
@@ -361,7 +362,7 @@
                         <li class="skills__image scroll-item">
                             <img
                                 src="img/skills/react.svg"
-                                alt="WordPress icon"
+                                alt="react icon"
                                 class="skills__img"
                                 title="react.js"
                             />
@@ -377,7 +378,7 @@
                         <li class="skills__image scroll-item">
                             <img
                                 src="img/skills/npm.png"
-                                alt="gulp icon"
+                                alt="npm icon"
                                 class="skills__img"
                                 title="Пакетный менеджер NPM"
                             />
@@ -393,7 +394,7 @@
                         <li class="skills__image scroll-item">
                             <img
                                 src="img/skills/git.png"
-                                alt="Git icon"
+                                alt="Github icon"
                                 class="skills__img"
                                 title="Система контроля версий GitHub"
                             />
@@ -437,7 +438,13 @@
             </section>
             <section class="experience" id="experience">
                 <div class="container">
-                    <h2 class="section-title">&lt;опыт&gt;</h2>
+                    <h2 class="section-title">
+                        &lt;опыт&gt;
+                        <span>
+                            'В этой секции указан релевантный опыт, про
+                            остальной бэкграунд в частном порядке'
+                        </span>
+                    </h2>
                     <ul class="experience__list">
                         <li class="experience__item scroll-item">
                             Сентябрь 2023 - по настоящее время - улучшение
@@ -481,16 +488,23 @@
             </section>
             <section class="contacts" id="contacts">
                 <div class="container">
-                    <h2 class="section-title">&lt;контакты&gt;</h2>
+                    <h2 class="section-title">
+                        &lt;контакты&gt;
+                        <span>
+                            'Последний раздел - контакты. 4 способа: написать
+                            электронное сообщение, воспользоваться телеграм,
+                            открыть во вконтакте и перейти на github'
+                        </span>
+                    </h2>
                     <ul class="contacts__list">
                         <li class="contacts__item">
                             <a
                                 href="mailto:kramskoy.va@gmail.com"
                                 class="contacts__link"
                                 title="отправить e-mail"
-                                ><i class="fa-solid fa-envelope"></i>
-                                kramskoy.va@gmail.com</a
                             >
+                                <img src="./img/email.png" alt="e-mail" />
+                            </a>
                         </li>
                         <li class="contacts__item">
                             <a
@@ -498,27 +512,30 @@
                                 class="contacts__link"
                                 target="_blank"
                                 title="открыть telegram"
-                                >Telegram</a
                             >
+                                <img src="./img/telegram.svg" alt="telegram" />
+                            </a>
                         </li>
-                        <div class="about__socials">
+                        <li class="contacts__item">
                             <a
                                 href="https://vk.com/kramskoy_v"
-                                class="about__link"
+                                class="contacts__link"
                                 target="_blank"
-                                title="vkontakte"
+                                title="перейти во вконтакте"
                             >
-                                <i class="fa-brands fa-vk"></i
-                            ></a>
+                                <img src="./img/vk.png" alt="vk" />
+                            </a>
+                        </li>
+                        <li class="contacts__item">
                             <a
                                 href="https://github.com/Kramskoy-v"
-                                class="about__link"
+                                class="contacts__link"
                                 target="_blank"
-                                title="github"
+                                title="перейти на github"
                             >
-                                <i class="fa-brands fa-github-square"></i
-                            ></a>
-                        </div>
+                                <img src="./img/github.svg" alt="github" />
+                            </a>
+                        </li>
                     </ul>
                     <p class="section-title">&lt;/контакты&gt;</p>
                 </div>

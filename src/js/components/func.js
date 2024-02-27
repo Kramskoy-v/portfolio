@@ -33,3 +33,27 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollAnimation();
     });
 });
+
+//Hamburger menu
+const hamburger = document.querySelector(".hamburger"),
+    mobileMenu = document.querySelector(".menu"),
+    linkClose = document.querySelector(".menu__list");
+
+hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+});
+
+const closeMenu = () => {
+    mobileMenu.classList.remove("active");
+};
+
+const closeHam = () => {
+    hamburger.classList.remove("active");
+};
+
+linkClose.addEventListener("touchstart", function (event) {
+    if (event.target.closest(".menu__link")) {
+        closeMenu(), closeHam();
+    }
+});

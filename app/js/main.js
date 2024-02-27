@@ -62,6 +62,26 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Hamburger menu
+const hamburger = document.querySelector(".hamburger"),
+  mobileMenu = document.querySelector(".menu"),
+  linkClose = document.querySelector(".menu__list");
+hamburger.addEventListener("click", function () {
+  hamburger.classList.toggle("active");
+  mobileMenu.classList.toggle("active");
+});
+const closeMenu = () => {
+  mobileMenu.classList.remove("active");
+};
+const closeHam = () => {
+  hamburger.classList.remove("active");
+};
+linkClose.addEventListener("touchstart", function (event) {
+  if (event.target.closest(".menu__link")) {
+    closeMenu(), closeHam();
+  }
+});
+
 /***/ }),
 
 /***/ "./src/js/components/parallax.js":
@@ -115,12 +135,22 @@ __webpack_require__.r(__webpack_exports__);
 
 const swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwiper", {
   loop: true,
-  slidesPerView: 3,
-  spaceBetween: 50,
+  slidesPerView: 1,
+  spaceBetween: 0.5,
   centeredSlides: true,
   mousewheel: true,
-  direction: "vertical",
-  effect: "coverflow"
+  effect: "coverflow",
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      direction: "vertical"
+    },
+    576: {
+      slidesPerView: 1.7,
+      spaceBetween: 10
+    }
+  }
 });
 
 /***/ }),
@@ -135,37 +165,26 @@ const swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".mySwi
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var typed_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! typed.js */ "./node_modules/typed.js/dist/typed.module.js");
 
-
-/* const bodyEl = document.body;
 const header = document.querySelector(".header");
 const titleBox = document.querySelector(".home__title-box");
 const titleDescription = document.querySelector(".home__description-box");
 const homeArrow = document.querySelector(".home__arrow");
-
-bodyEl.style.overflow = "hidden";
-
-const homeTitle = new Typed(".home__title", {
-    strings: ["Привет, Я Вячеслав! Я Web-разработчик"],
-    typeSpeed: 50,
+const homeTitle = new typed_js__WEBPACK_IMPORTED_MODULE_0__["default"](".home__title", {
+  strings: ["Привет, Я Вячеслав! Я Web-разработчик"],
+  typeSpeed: 50
 });
-
 setTimeout(() => {
-    const homeDescription = new Typed(".home__description", {
-        strings: [
-            "Здесь я рассказываю общую информацию о себе, своем опыте, выполненных работах",
-        ],
-        typeSpeed: 35,
-    });
+  const homeDescription = new typed_js__WEBPACK_IMPORTED_MODULE_0__["default"](".home__description", {
+    strings: ["Здесь я рассказываю общую информацию о себе, своем опыте, выполненных работах"],
+    typeSpeed: 35
+  });
 }, 3000);
-
 setTimeout(() => {
-    bodyEl.style.overflow = null;
-    header.classList.remove("hidden");
-    homeArrow.classList.remove("hidden");
-    titleBox.style.transform = "translateX(0)";
-    titleDescription.style.transform = "translateX(0)";
+  header.classList.remove("hidden");
+  homeArrow.classList.remove("hidden");
+  titleBox.classList.add("transform");
+  titleDescription.classList.add("transform");
 }, 8000);
- */
 
 /***/ }),
 
