@@ -1,0 +1,10 @@
+@import "../../node_modules/swiper/swiper-bundle.min";
+
+// базовые подключения
+@import "vars";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./pages/main-page";
+@import "./pages/main-page-media";
