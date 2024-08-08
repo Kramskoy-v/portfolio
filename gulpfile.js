@@ -1,4 +1,4 @@
-const { src, dest, series, watch } = require("gulp");
+const {src, dest, series, watch} = require("gulp");
 const autoprefixer = require("gulp-autoprefixer");
 const cleanCSS = require("gulp-clean-css");
 const del = require("del");
@@ -12,7 +12,7 @@ const htmlmin = require("gulp-htmlmin");
 const gulpif = require("gulp-if");
 const notify = require("gulp-notify");
 const image = require("gulp-imagemin");
-const { readFileSync } = require("fs");
+const {readFileSync} = require("fs");
 
 const mainSass = gulpSass(sass);
 const webpackStream = require("webpack-stream");
@@ -43,7 +43,7 @@ const clean = () => {
 
 // scss styles
 const styles = () => {
-  return src(paths.srcScss, { sourcemaps: !isProd })
+  return src(paths.srcScss, {sourcemaps: !isProd})
     .pipe(
       plumber(
         notify.onError({
@@ -68,7 +68,7 @@ const styles = () => {
         })
       )
     )
-    .pipe(dest(paths.buildCssFolder, { sourcemaps: "." }))
+    .pipe(dest(paths.buildCssFolder, {sourcemaps: "."}))
     .pipe(browserSync.stream());
 };
 
