@@ -7,11 +7,17 @@ const swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   mousewheel: true,
   effect: "coverflow",
+  pagination: {
+    el: ".swiper-pagination",
+  },
   breakpoints: {
-    768: {
+    769: {
       slidesPerView: 3,
       spaceBetween: 50,
       direction: "vertical",
+      pagination: {
+        enabled: false,
+      },
     },
     576: {
       slidesPerView: 1.7,
