@@ -1,4 +1,6 @@
-/node_modules
-/app
-/old
+./node_modules
+./app
 package-lock.json
+.idea
+.vscode
+app/*
